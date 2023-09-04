@@ -1,5 +1,6 @@
 /*eslint-disable*/
 import React from "react";
+import { BrowserView, MobileView} from 'react-device-detect';
 
 // reactstrap components
 import { Container } from "reactstrap";
@@ -24,46 +25,28 @@ function IndexHeader() {
 
   return (
     <>
-      <div className="page-header clear-filter" filter-color="blue">
+      <div className="page-header clear-filter">
         <div
           className="page-header-image"
           style={{
-            backgroundImage: "url(" + require("assets/img/header.jpg") + ")"
+            backgroundImage: "url(" + require("assets/img/HomePageCover.jpg") + ")"
           }}
           ref={pageHeader}
         ></div>
         <Container>
           <div className="content-center brand">
-            <img
-              alt="..."
-              className="n-logo"
-              src={require("assets/img/now-logo.png")}
-            ></img>
-            <h1 className="h1-seo">Now UI Kit.</h1>
-            <h3>A beautiful Bootstrap 4 UI kit. Yours free.</h3>
+          <BrowserView>
+            <h1 class="h1-seo" style={{color:"black"}}> <b>Welcome to Turkish Airlines</b></h1>
+            <h3 style={{color:"black"}}><b>We fly to more countries than any other airline</b></h3>
+          </BrowserView>
+
+          <MobileView>
+            <h2 class="h1-seo" style={{color:"black"}}> <b>Welcome to Turkish Airlines</b></h2>
+            <h4 style={{color:"black"}}><b>We fly to more countries than any other airline</b></h4>
+          </MobileView>
+
           </div>
-          <h6 className="category category-absolute">
-            Designed by{" "}
-            <a href="http://invisionapp.com/?ref=creativetim" target="_blank">
-              <img
-                alt="..."
-                className="invision-logo"
-                src={require("assets/img/invision-white-slim.png")}
-              ></img>
-            </a>
-            . Coded by{" "}
-            <a
-              href="https://www.creative-tim.com?ref=nukr-index-header"
-              target="_blank"
-            >
-              <img
-                alt="..."
-                className="creative-tim-logo"
-                src={require("assets/img/creative-tim-white-slim2.png")}
-              ></img>
-            </a>
-            .
-          </h6>
+          
         </Container>
       </div>
     </>

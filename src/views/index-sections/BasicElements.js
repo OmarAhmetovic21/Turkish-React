@@ -51,7 +51,7 @@ function BasicElements() {
     <>
       <div className="section section-basic" id="basic-elements">
         <Container>
-          <h3 className="title">Basic Elements</h3>
+          <h2 className="title">Turkish Airlines Statistics</h2>
           <h4>Buttons</h4>
           <p className="category">Pick your style</p>
           <Row>
