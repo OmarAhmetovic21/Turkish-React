@@ -56,8 +56,8 @@ function BasicElements() {
       {
         label: 'Flights per year',
         data: [460000, 480000, 250000, 350000, 400000],
-        backgroundColor: '#c70a0c',
-        borderColor: '#c70a0c',
+        backgroundColor: '#202020',
+        borderColor: '#202020',
         borderWidth: 2
       }
     ]
