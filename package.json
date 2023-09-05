@@ -3,10 +3,12 @@
   "version": "1.5.2",
   "private": true,
   "dependencies": {
+    "chart.js": "^4.3.0",
     "moment": "2.29.4",
     "nouislider": "15.4.0",
     "react": ">=16.8.0",
     "react-bootstrap-switch": "15.5.3",
+    "react-chartjs-2": "^5.2.0",
     "react-datetime": "3.2.0",
     "react-device-detect": "^2.2.3",
     "react-dom": ">=16.8.0",
