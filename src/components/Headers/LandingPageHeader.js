@@ -1,8 +1,9 @@
+/*eslint-disable*/
 import React from "react";
+import { BrowserView, MobileView} from 'react-device-detect';
 
 // reactstrap components
-import { Button, Container } from "reactstrap";
-
+import { Container } from "reactstrap";
 // core components
 
 function LandingPageHeader() {
@@ -21,47 +22,32 @@ function LandingPageHeader() {
       };
     }
   });
+
   return (
     <>
-      <div className="page-header page-header-small">
+      <div className="page-header clear-filter">
         <div
           className="page-header-image"
           style={{
-            backgroundImage: "url(" + require("assets/img/bg6.jpg") + ")"
+            backgroundImage: "url(" + require("assets/img/FleetPageCover.jpg") + ")"
           }}
           ref={pageHeader}
         ></div>
-        <div className="content-center">
-          <Container>
-            <h1 className="title">This is our great company.</h1>
-            <div className="text-center">
-              <Button
-                className="btn-icon btn-round"
-                color="info"
-                href="#pablo"
-                onClick={(e) => e.preventDefault()}
-              >
-                <i className="fab fa-facebook-square"></i>
-              </Button>
-              <Button
-                className="btn-icon btn-round"
-                color="info"
-                href="#pablo"
-                onClick={(e) => e.preventDefault()}
-              >
-                <i className="fab fa-twitter"></i>
-              </Button>
-              <Button
-                className="btn-icon btn-round"
-                color="info"
-                href="#pablo"
-                onClick={(e) => e.preventDefault()}
-              >
-                <i className="fab fa-google-plus"></i>
-              </Button>
-            </div>
-          </Container>
-        </div>
+        <Container>
+          <div className="content-center brand">
+          <BrowserView>
+            <h1 class="h1-seo" style={{color:"black"}}> <b>Turkish Airlines</b></h1>
+            <h3 style={{color:"black"}}><b>Fleet</b></h3>
+          </BrowserView>
+
+          <MobileView>
+            <h2 class="h1-seo" style={{color:"black"}}> <b>Turkish Airlines</b></h2>
+            <h4 style={{color:"black"}}><b>Fleet</b></h4>
+          </MobileView>
+
+          </div>
+          
+        </Container>
       </div>
     </>
   );
